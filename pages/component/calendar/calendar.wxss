@@ -1,0 +1,7 @@
+/* pages/component/calendar/calendar/calendar.wxss */
+.checkin,.checkout{background-color:#38b0ff!important;}
+.checkin::after{content: '入住';display: block}
+.checkout::after{content: '离店';display: block}
+.label{text-align:center;width: 107rpx;background: #f0f9ff;font-size:14px;margin:1px;height: 100rpx}
+.dayrow{display: flex}
+.nonrange{color:#bbb}

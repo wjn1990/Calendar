@@ -1,0 +1,7 @@
+<!--pages/index.wxml-->
+<view style='display:flex'>入住时间：<input type='text' bindtap='choosedate' value='{{checkindatestr}}' style='border:1px solid #d8d8d8'></input>
+</view>
+<view class='{{calendarshow?"":"hide"}}'>
+  <!-- 以下是对一个自定义组件的引用 -->
+  <mycalandar year="{{year}}" month='{{month}}' checkindate='{{checkindate}}' checkoutdate='{{checkoutdate}}'  bind:calendarevent="calendarEvent"></mycalandar>
+</view>

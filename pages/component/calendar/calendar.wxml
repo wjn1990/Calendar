@@ -1,0 +1,60 @@
+<!--pages/component/calendar/calendar.wxml-->
+<view id='calendar' class='calendar'>
+  <view id="month" class='month' style='display:flex'>
+    <button bindtap='showPrevMonth'>
+      上翻
+    </button>
+    <label>
+  {{year}}年{{month}}月
+ </label>
+    <button bindtap='showNextMonth'>
+      下翻
+    </button>
+  </view>
+  <view id="dayweek">
+    <view id="week" style='display:flex'>
+      <label class='label'>
+  日
+ </label>
+      <label class='label'>
+  一
+ </label>
+      <label class='label'>
+二
+ </label>
+      <label class='label'>
+  三
+ </label>
+      <label class='label'>
+  四
+ </label>
+      <label class='label'>
+  五
+ </label>
+      <label class='label'>
+六
+ </label>
+    </view>
+
+    <view id="day">
+      <block wx:for="{{daylist}}">
+        <view class='dayrow'>
+          <block wx:for="{{item}}" wx:for-item="day">
+            <label id='{{day.id}}' bindtap='{{day.style=="nonrange"?"":"day_click"}}' class="label {{day.style}} {{day.id==checkindate?'checkin':day.id==checkoutdate?'checkout':''}}">{{day.day}}</label>
+          </block>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view id="control" style='display:flex'>
+    <button bindtap='confirm'>
+      确定
+    </button>
+    <button bindtap='cancel'>
+      取消
+    </button>
+  </view>
+</view>
+
+<slot></slot>

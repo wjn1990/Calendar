@@ -1,0 +1,3 @@
+/* pages/index.wxss */
+input{font-size: 14px;width:400rpx}
+.hide{display:none;}
